@@ -119,6 +119,7 @@ include "backend.php";
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Date Time</th>
+                                        <th>Nummber OF Employees</th>
                                     </tr>
                                     <?php
                                     $query = "SELECT * FROM user WHERE role_id = 1";
@@ -133,6 +134,15 @@ include "backend.php";
                                                 <td><?php echo $rows['name']; ?></td>
                                                 <td><?php echo $rows['email']; ?></td>
                                                 <td><?php echo $rows['datetime']; ?></td>
+                                                <td>
+                                                    <?php
+                                                   $numemployees=$rows['id'];
+                                                   $employees = "SELECT COUNT(*) as total FROM employee WHERE user_id = $numemployees";
+                                                   $employeesconn = mysqli_query($conn, $employees);
+                                                   $employeesconnrow = mysqli_fetch_assoc($employeesconn);
+                                                   echo $employeesconnrow['total'];
+                                                    ?>
+                                                </td>
                                             </tr>
 
                                         <?php 
@@ -142,6 +152,7 @@ include "backend.php";
                                         $nofound = "No Employees found";
                                         ?>
                                         <tr>
+                                            <td>No Data Found</td>
                                             <td>No Data Found</td>
                                             <td>No Data Found</td>
                                             <td>No Data Found</td>
