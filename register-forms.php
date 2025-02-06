@@ -26,7 +26,6 @@
       
       <ul class="tab-group">
         <li class="tab"><a href="#">Log In</a></li>
-        <!-- <li class="tab"><a href="#signup">Sign Up</a></li> -->
       </ul>
       
       <div class="tab-content">
@@ -55,59 +54,7 @@
               </form>
 
           </div>
-
-          <!-- <div id="signup">   
-            <h1>Sign Up for Free</h1>
             
-            <form action="" method="post">
-
-              <div class="field-wrap">
-                  <label>
-                  Enter Your Name<span class="req">*</span>
-                  </label>
-                  <input type="text"required autocomplete="off" name="user_name">
-              </div>
-
-              <div class="field-wrap">
-                  <label>
-                  Email Address<span class="req">*</span>
-                  </label>
-                  <input type="email"required autocomplete="off" name="user_email">
-              </div>
-
-              <div class="field-wrap">
-                  <select name="select_role" required>
-                  <option value="" selected disabled>Select Role To Register *</option>
-                    <?php
-                    $query="select * from role_person";
-                    $data =mysqli_query($conn,$query);
-                      while($rows=mysqli_fetch_assoc($data)){
-                      ?>
-                  <option value="<?php echo $rows['id']; ?>"><?php echo $rows['role_name']; ?></option>
-                  <?php } ?>
-              </select>
-              </div>
-              
-              <div class="field-wrap">
-                  <label>
-                  Set A Password<span class="req">*</span>
-                  </label>
-                  <input type="password"required autocomplete="off" name="user_pasword">
-              </div>
-
-              <div class="field-wrap">
-                  <label>
-                  Confirm Password<span class="req">*</span>
-                  </label>
-                  <input type="password"required autocomplete="off" name="user_cpasword">
-              </div>
-              
-              <button type="submit" class="button button-block" name="user_data">Get Started</button>
-            
-            </form>
-
-          </div> -->
-              
         
       </div>
       
@@ -145,22 +92,6 @@
     }
 
 });
-
-// $('.tab a').on('click', function (e) {
-  
-//   e.preventDefault();
-  
-//   $(this).parent().addClass('active');
-//   $(this).parent().siblings().removeClass('active');
-  
-//   target = $(this).attr('href');
-
-//   $('.tab-content > div').not(target).hide();
-  
-//   $(target).fadeIn(600);
-  
-// });
-
 
 document.addEventListener('DOMContentLoaded', () => {
             const notificationBar = document.querySelector('.notification-bar');
